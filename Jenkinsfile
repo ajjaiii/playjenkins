@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Checkout Source') {
             steps {
-                   sh 'sudo apt update'
-                   sh 'sudo apt install git'
+                   sh 'ls -al'
                    
             }
         }
