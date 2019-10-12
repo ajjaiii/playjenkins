@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    registry = "ajjaiii/myweb:1"
+    registry = "192.168.99.1:5000/myweb:1"
     dockerImage = ""
   }
 
@@ -11,7 +11,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git 'https://github.com/ajjaiii/playjenkins.git'
+        git "https://github.com/ajjaiii/playjenkins.git"
       }
     }
 
