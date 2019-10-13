@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout Source') {
             steps {
-                   git url: ''
+                   git url: 'https://github.com/ajjaiii/playjenkins.git', branch: 'master'
                    sh 'ls -al'
                    
             }
