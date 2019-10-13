@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Checkout Source') {
             steps {
+                   git url: ''
                    sh 'ls -al'
                    
             }
