@@ -1,4 +1,10 @@
 pipeline {
+
+  environment {
+    registry = "ajjaiii/myweb:1"
+    dockerImage = ""
+  }
+
   agent any
 
   stages {
