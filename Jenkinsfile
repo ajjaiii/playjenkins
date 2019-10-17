@@ -1,46 +1,23 @@
+
 pipeline {
-
-  environment {
-    registry = "ajjaiii/myweb"
-    dockerImage = ""
-  }
-
   agent any
-
   stages {
 
-    stage('Checkout Source') {
+    stage('Stage 1') {
       steps {
-        git 'https://github.com/ajjaiii/playjenkins.git'
-      }
-    }
-
-    stage('Build image') {
-      steps{
         script {
-          dockerImage = docker.build registry + ":$BUILD_NUMBER"
+          echo 'Stage 1'
         }
       }
     }
 
-    stage('Push Image') {
-      steps{
-        script {
-          docker.withRegistry( "" ) {
-            dockerImage.push()
-          }
-        }
-      }
-    }
-
-    stage('Deploy App') {
+    stage('Stage 2') {
       steps {
         script {
-          kubernetesDeploy(configs: "myweb.yaml", kubeconfigId: "mykubeconfig")
+          echo 'Stage 2'
         }
       }
     }
 
   }
-
 }
