@@ -18,15 +18,23 @@ pipeline {
       }
     }
 
-    stage('Stage 2') {
-      steps {
+    stage('Build image') {
+      steps{
         script {
-          echo 'Stage 2'
-          sh 'usermod -aG docker jenkins'
-          sh 'docker version'
+          dockerImage = docker.build registry + ":$BUILD_NUMBER"
         }
       }
     }
 
+    stage('Push Image') {
+      steps{
+        script {
+          docker.withRegistry( "" ) {
+            dockerImage.push()
+          }
+        }
+      }
+    }
+    
   }
 }
