@@ -16,7 +16,7 @@ pipeline {
       steps {
         script {
           echo 'Stage 2'
-          sh 'docker version'
+          sh 'less /etc/passwd'
         }
       }
     }
