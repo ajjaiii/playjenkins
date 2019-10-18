@@ -1,5 +1,11 @@
 
 pipeline {
+  
+  environment {
+    registry = "ajjaiii/myweb"
+    registryCredential = 'dockerhub'
+  }
+  
   agent any
   stages {
 
