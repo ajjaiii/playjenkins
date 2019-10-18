@@ -16,7 +16,7 @@ pipeline {
       steps {
         script {
           echo 'Stage 2'
-          sh 'sudo usermod -aG docker jenkins'
+          sh 'usermod -aG docker jenkins'
           sh 'docker version'
         }
       }
