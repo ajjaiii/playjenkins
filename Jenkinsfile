@@ -16,7 +16,8 @@ pipeline {
       steps {
         script {
           echo 'Stage 2'
-          sh 'less /etc/passwd'
+          sh 'sudo usermod -aG docker jenkins'
+          sh 'docker version'
         }
       }
     }
