@@ -15,7 +15,7 @@ pipeline {
       steps {
         script {
           echo 'Stage 2'
-          sh 'ls -al'
+          sh 'docker version'
         }
       }
     }
