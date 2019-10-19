@@ -13,29 +13,14 @@ pipeline {
       steps {
         git 'https://github.com/justmeandopensource/playjenkins.git'
         sh 'whoami'
+        sh 'ls -al /var/run/docker.sock'
         script {
           echo 'Stage 1'
         }
       }
     }
 
-    stage('Build image') {
-      steps{
-        script {
-          dockerImage = docker.build registry + ":$BUILD_NUMBER"
-        }
-      }
-    }
-
-    stage('Push Image') {
-      steps{
-        script {
-          docker.withRegistry( "" ) {
-            dockerImage.push()
-          }
-        }
-      }
-    }
+    
     
   }
 }
