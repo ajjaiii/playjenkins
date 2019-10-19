@@ -12,6 +12,7 @@ pipeline {
     stage('Checkout repo') {
       steps {
         git 'https://github.com/justmeandopensource/playjenkins.git'
+        sh 'whoami'
         script {
           echo 'Stage 1'
         }
