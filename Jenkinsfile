@@ -13,7 +13,7 @@ pipeline {
       steps {
         git 'https://github.com/justmeandopensource/playjenkins.git'
         sh 'whoami'
-        sh 'ls -al /var/run/docker.sock'
+        sh 'ls -al /var/run/'
         script {
           echo 'Stage 1'
         }
