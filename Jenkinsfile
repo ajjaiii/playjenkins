@@ -12,9 +12,6 @@ pipeline {
     stage('Checkout update repo') {
       steps {
         git 'https://github.com/justmeandopensource/playjenkins.git'
-        script {
-          echo 'Stage 1'
-        }
       }
     }
 
