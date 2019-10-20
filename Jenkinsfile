@@ -13,7 +13,7 @@ pipeline {
       steps {
         git 'https://github.com/justmeandopensource/playjenkins.git'
         sh 'whoami'
-        sh 'hostnamectl'
+        sh 'uname -a'
         script {
           echo 'Stage 1'
         }
