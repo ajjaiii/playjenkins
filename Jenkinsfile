@@ -13,7 +13,7 @@ pipeline {
       steps {
         git 'https://github.com/justmeandopensource/playjenkins.git'
         sh 'whoami'
-        sh 'uname -a'
+        sh 'docker version'
         script {
           echo 'Stage 1'
         }
