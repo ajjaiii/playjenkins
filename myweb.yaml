@@ -16,7 +16,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: ajjaiii/myweb:1
+      - image: ajjaiii/myweb:$BUILD_NUMBER
         imagePullPolicy: Always
         name: myweb
 
