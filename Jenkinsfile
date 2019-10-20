@@ -9,7 +9,7 @@ pipeline {
   agent any
   stages {
 
-    stage('Checkout repo') {
+    stage('Checkout update repo') {
       steps {
         git 'https://github.com/justmeandopensource/playjenkins.git'
         script {
