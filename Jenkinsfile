@@ -11,7 +11,7 @@ pipeline {
 
     stage('Checkout update repo') {
       steps {
-        git 'https://github.com/justmeandopensource/playjenkins.git'
+        git 'https://github.com/ajjaiii/playjenkins.git'
       }
     }
 
